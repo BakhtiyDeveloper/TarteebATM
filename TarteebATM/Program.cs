@@ -1,4 +1,5 @@
 ﻿using System;
+using TarteebATM.Services;
 
 namespace TarteebATM
 {
@@ -6,27 +7,50 @@ namespace TarteebATM
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Tarteeb ATM ga hush kelibsiz!!!!");
-            Console.WriteLine("Dasturdan foydalanish uchun o'zingizga parol yarating!!\n");
+            MenuService menu = new MenuService();
+
+            menu.PrintMessage("Tarteeb ATM ga hush kelibsiz!!!!");
+            menu.PrintMessage("Dasturdan foydalanish uchun o'zingizga parol yarating!!\n");
 
             Console.Write("Yangi parolni kiriting: ");
             string userInputGreatePassword = Console.ReadLine();
             Console.Clear();
+            menu.PrintMessage("Parol yaratildi.........");
+            menu.PrintMessage("Davom etish uchun istalgan klavyaturani bosing!!!");
+            Console.ReadKey(); 
 
-            Console.WriteLine("========Tarteeb ATM========");
-            Console.WriteLine("Dasturdan foydalanish uchun yaratilgan parolmi kiriting!!!!\n");
-            Console.Write("Parolni kiriting: ");
-            string userInputPassword = Console.ReadLine();
-
-            do 
+            
+           
+            bool isPassword = true;
+            
+            while (isPassword)
             {
-                Console.WriteLine("parol");
+                Console.Clear();
+                menu.PrintMessage("========Tarteeb ATM========");
+                menu.PrintMessage("Dasturdan foydalanish uchun yaratilgan parolni kiriting!!!!\n");
+                Console.Write("Parolingizni kiriting: ");
+                string userInputPassword = Console.ReadLine();
+
+                if (userInputPassword == userInputGreatePassword)
+                {
+                    Console.WriteLine("dcdsdscd");
+
+                    
 
 
+                    isPassword = false;
+                }
+                else 
+                {
+                    menu.PrintMessage("Parolni noto'g'ri kiritdingiz!!!");
+                    menu.PrintMessage("Davom etish uchun istalgan klavyaturani bosing!!!");
+                    Console.ReadKey();
 
-            } while (userInputPassword == userInputGreatePassword);
-            {
-                Console.WriteLine("dcdcdscdscdsc");
+                }
+
+                
+
+
             }
 
 
