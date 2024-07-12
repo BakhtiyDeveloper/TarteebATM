@@ -16,6 +16,7 @@ namespace TarteebATM
             string userInputGreatePassword = Console.ReadLine();
             Console.Clear();
             menu.PrintMessage("Parol yaratildi.........");
+            menu.PrintMessage("Sizga hozirda $10.000 taqdim etildi.");
             menu.PrintMessage("Davom etish uchun istalgan klavyaturani bosing!!!");
             Console.ReadKey(); 
 
@@ -33,9 +34,9 @@ namespace TarteebATM
 
                 if (userInputPassword == userInputGreatePassword)
                 {
-                    Console.WriteLine("dcdsdscd");
+                    menu.ShowMenu();
 
-                    
+
 
 
                     isPassword = false;
