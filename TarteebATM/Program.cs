@@ -8,8 +8,6 @@
 
             try
             {
-
-
                 var menu = new Menu();
                 var password = new Password();
                 var balance = new Balance();
