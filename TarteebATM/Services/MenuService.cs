@@ -1,28 +1,16 @@
-﻿using System;
-
-namespace TarteebATM.Services
+﻿namespace TarteebBank.Servises
 {
-    internal class MenuService
+    internal class Menu
     {
         internal void ShowMenu()
         {
-            PrintMassegeMenu("\nChoose one below!!!");
-            PrintMassegeMenu("1 - Balance check.");
-            PrintMassegeMenu("2 - Withdraw money from the balance.");
-            PrintMassegeMenu("3 - Topping up the balance.");
-            PrintMassegeMenu("4 - Spending");
-            PrintMassegeMenu("5 - Exit the program");
-        }
-
-        
-        internal void PrintMessage(string message) 
-        {
-            Console.WriteLine(message);
-        }
-
-        private void PrintMassegeMenu(string massage)
-        {
-            Console.WriteLine(massage);
+            VOneLoggerService logger = new VOneLoggerService();
+            logger.Log("\nChoose one below!!!");
+            logger.Log("1 - Balance check.");
+            logger.Log("2 - Withdraw money from the balance.");
+            logger.Log("3 - Topping up the balance.");
+            logger.Log("4 - Spending");
+            logger.Log("5 - Exit the program");
         }
     }
 }

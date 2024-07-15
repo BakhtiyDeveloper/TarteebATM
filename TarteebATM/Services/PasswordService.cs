@@ -1,7 +1,11 @@
-﻿namespace TarteebATM.Services
+﻿namespace TarteebBank.Servises
 {
-    internal class PasswordService
+    internal class Password
     {
-
+        internal string GetUserValueByPassword(string massege)
+        {
+            Console.Write(massege);
+            return Console.ReadLine();
+        }
     }
 }
